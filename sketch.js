@@ -58,13 +58,13 @@ function draw() {
     ground.velocityX = -6;
     if (ground.x < 0) {
       ground.x = 200;
+    }
       if (keyDown("space") && trex.y >= 356) {
         trex.velocityY = -12;
         jump.play();
       }
       spawnclouds();
       spawnobstacle();
-    }
     trex.velocityY = trex.velocityY + 1;
     score = score + 1;
     if (score % 100 === 0) {
